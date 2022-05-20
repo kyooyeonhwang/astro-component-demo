@@ -1,0 +1,24 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import MainHead from '../components/MainHead.astro'
+import FontStyleCustom from '../components/FontStyleCustom.astro'
+
+const { title, description, head } = Astro.props;
+---
+<html lang="ko">
+  <head>
+    {head}
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+      <Header/>
+      <main>
+        <FontStyleCustom/>
+        <slot />
+        
+      </main>
+      <Footer />
+  <script src="/js/app.js"></script>
+  </body>
+</html>
