@@ -1,23 +1,34 @@
 ---
 import Header from '../components/Header.astro'
+import Sidebar from '../components/Sidebar.astro'
 import Footer from '../components/Footer.astro'
 import MainHead from '../components/MainHead.astro'
-import FontStyleCustom from '../components/FontStyleCustom.astro'
 
 const { title, description, head } = Astro.props;
 ---
 <html lang="ko">
   <head>
-    {head}
     <MainHead title={title} description={description} />
   </head>
-  <body>
+  <body id="doc_guide_page">
+    <div id="doc_container">
       <Header/>
-      <main>
-        <slot />
-        
+      <main id="doc_main" class="container content">
+        <Sidebar/>
+        <div id="doc_contents">
+          <slot />
+        </div>
       </main>
       <Footer />
-  <script src="/js/app.js"></script>
+    </div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.6/bliss.js" integrity="sha512-B0BYFq7S4EWI/IZf66vrFBoSRceVXfiMOhHfd6akWwX9DpjU3i8zaRpj8m6SRY0FMKFP/8UyOjl74p36fmSA3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://codemirror.net/lib/codemirror.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <script src="https://codemirror.net/mode/css/css.js"></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

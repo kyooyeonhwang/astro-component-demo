@@ -1,0 +1,61 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">labels</h2>
+  <p class="doc_summary">Label은 새롭거나 분류된 콘텐츠 요소에 주의를 집중시킵니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>준비중</li>
+    </ul>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><span class="label">인기</span>
+
+  <!-- 2개이상의 묶음일경우 -->
+  <div class="label-group">
+    <span class="label">인기</span>
+    <span class="label">최상품</span>
+    <span class="label">무료배송</span>
+  </div></textarea>
+    </div>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">변형</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><span class="label type01">인기</span>
+
+  <!-- 2개이상의 묶음일경우 -->
+  <div class="label-group">
+    <span class="label type01">인기</span>
+    <span class="label type02">최상품</span>
+    <span class="label type03">무료배송</span>
+  </div></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 예시</h3>
+    <div class="code_block">
+      <textarea class="code_content html ui_code_content">&lt;!-- 나쁜예시 --&gt;
+  <div class="label-group">
+    <span class="label">인기</span>
+  </div>
+
+  &lt;!-- 단독으로 사용될때는 독립적으로 사용 --&gt;
+  <span class="label">인기</span></textarea>
+    </div>
+  </section>
+</MainLayout>

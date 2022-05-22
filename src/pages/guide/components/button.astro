@@ -1,0 +1,137 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">button</h2>
+  <p class="doc_summary">버튼은 작업을 수행하는데 사용되는 클릭 할 수 있는 항목입니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>양식을 제출하다</li>
+      <li>새로운 일을 시작하다.</li>
+      <li>새 UI 요소가 페이지에 나타나도록 트리거</li>
+      <li>프로세스에서 새 단계 또는 다음 단계 지정</li>
+    </ul>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><button type="button" class="btn">취소</button>
+  <button type="button" class="btn btn-primary">확인</button>
+  <button type="button" class="btn btn-destructive">삭제</button>
+  <a href="" class="btn-link">링크 버튼</a></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">유형</h3>
+    <table class="doc_datatable">
+      <col style="width:120px;">
+      <col style="width:auto;">
+      <col style="width:auto;">
+      <thead>
+        <tr>
+          <th>미리보기</th>
+          <th>클래스명</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><button type="button" class="btn">취소</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn</code></td>
+          <td>버튼중에 가장 많이 사용되는 버튼입니다.</td>
+        </tr>
+        <tr>
+          <td><button type="button" class="btn btn-primary">확인</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-primary</code></td>
+          <td>가장 중요한 액션에 사용되는 버튼입니다.<br>
+            <code class="doc_code_inline">.btn</code> 기본 클래스에 추가해서 사용합니다.
+          </td>
+        </tr>
+        <tr>
+          <td><button type="button" class="btn btn-destructive">삭제</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-destructive</code></td>
+          <td>데이터를 영구적으로 지우는 것과 같은 기능의 버튼<br>
+            <code class="doc_code_inline">.btn</code> 기본 클래스에 추가해서 사용합니다.
+          </td>
+        </tr>
+        <!-- <tr>
+          <td><button type="button" class="btn btn-destructive" disabled>삭제</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-destructive</code></td>
+          <td>데이터를 영구적으로 지우는 것과 같은 기능의 버튼</td>
+        </tr> -->
+        <tr>
+          <td><a href="" class="btn-link">링크 버튼</a></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-link</code></td>
+          <td>준비중</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">사이즈</h3>
+    <ul class="doc_list">
+      <li>사이즈는 높이 기준으로 Large, Medium, Small을 가지고 있습니다.</li>
+      <li>기본 사이즈(Medium)를 제외하고 <code class="doc_code_inline">.large</code>, <code class="doc_code_inline">.small</code> 클래스를 요소에 추가해서 사용합니다.</li>
+    </ul>
+    <div class="code_preview">
+      <div class="doc_radio_group ui_doc_radio_group">
+        <span class="doc_radio_item">
+          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size01" data-size="large" checked>
+          <label for="doc_radio_group_size01">Large</label>
+        </span>
+        <span class="doc_radio_item">
+          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size02" data-size="">
+          <label for="doc_radio_group_size02">Default</label>
+        </span>
+        <span class="doc_radio_item">
+          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size03" data-size="small">
+          <label for="doc_radio_group_size03">Small</label>
+        </span>
+      </div>
+      <button type="button" class="btn">기본 버튼</button>
+      <button type="button" class="btn btn-primary">확인</button>
+      <button type="button" class="btn btn-destructive">삭제</button>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">아이콘 + 텍스트 버튼</h3>
+    <div class="code_preview">
+      <button type="button" class="btn btn-primary">
+        <span class="icon icon-buy" aria-hidden="true"></span>
+        구매하기
+      </button>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">아이콘 버튼</h3>
+    <div class="code_preview">
+      <button type="button" class="btn btn-primary">
+        <span class="icon icon-buy" aria-hidden="true"></span>
+        <!-- <span class="blind">구매하기</span> -->
+      </button>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">그룹</h3>
+    <div class="code_preview">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">확인</button>
+        <button type="button" class="btn">취소</button>
+      </div>
+    </div>
+  </section>
+</MainLayout>

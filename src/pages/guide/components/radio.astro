@@ -1,0 +1,87 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">radio</h2>
+  <p class="doc_summary">상호 배타적인 선택 항목 그룹이 있고 그룹에서 하나만 선택할 수 있는 경우 Radio Button을 사용하십시오.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><span class="radio-txt">
+    <input type="radio" name="ldo-label011" id="ldo-label011-01" checked>
+    <label for="ldo-label011-01">라디오버튼1</label>
+  </span>
+  <span class="radio-txt">
+    <input type="radio" name="ldo-label011" id="ldo-label011-02">
+    <label for="ldo-label011-02">라디오버튼2</label>
+  </span>
+  <span class="radio-txt">
+    <input type="radio" name="ldo-label011" id="ldo-label011-03">
+    <label for="ldo-label011-03">라디오버튼3</label>
+  </span></textarea>
+    </div>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">비활성화</h3>
+    <div class="code_preview">
+      <span class="radio-txt">
+        <input type="radio" name="ldo-label012" id="ldo-label012-01" checked disabled>
+        <label for="ldo-label012-01">라디오버튼1</label>
+      </span>
+      <span class="radio-txt">
+        <input type="radio" name="ldo-label012" id="ldo-label012-02" disabled>
+        <label for="ldo-label012-02">라디오버튼2</label>
+      </span>
+    </div>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">버튼 그룹</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="radio-btn-group">
+    <span class="radio-item">
+      <input type="radio" class="input-radio" name="rdo-label03" id="rdo-label03-01">
+      <label for="rdo-label03-01">월요일</label>
+    </span>
+    <span class="radio-item">
+      <input type="radio" class="input-radio" name="rdo-label03" id="rdo-label03-02">
+      <label for="rdo-label03-02">화요일</label>
+    </span>
+    <span class="radio-item">
+      <input type="radio" class="input-radio" name="rdo-label03" id="rdo-label03-03">
+      <label for="rdo-label03-03">수요일</label>
+    </span>
+  </div></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">레이아웃</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="radio-group fullsize">
+    <span class="radio-txt">
+      <input type="radio" name="ldo-label014" id="ldo-label014-01" checked>
+      <label for="ldo-label014-01">라디오버튼1</label>
+    </span>
+    <span class="radio-txt">
+      <input type="radio" name="ldo-label014" id="ldo-label014-02">
+      <label for="ldo-label014-02">라디오버튼2</label>
+    </span>
+    <span class="radio-txt">
+      <input type="radio" name="ldo-label014" id="ldo-label014-03">
+      <label for="ldo-label014-03">라디오버튼3</label>
+    </span>
+  </div></textarea>
+    </div>
+  </section>
+</MainLayout>

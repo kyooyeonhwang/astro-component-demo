@@ -1,0 +1,60 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+  <h2 class="doc_h2">accordion</h2>
+  <p class="doc_summary">축소 및 확장할 수 있는 콘텐츠 영역입니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>준비중</li>
+    </ul>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_preview">
+      <details>
+        <summary>summary</summary>
+        <div class="contents">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laboriosam quibusdam blanditiis dolorum nostrum magnam odio dicta aut harum pariatur?
+        </div>
+      </details>
+      <div class="accordion-container js-accordion-container">
+        <ul>
+          <li class="accordion-item is-active">
+            <div class="accordion-header">
+              <span>릴리스 업데이트1</span>
+              <button type="button" class="btn-toggle js-toggle">열림</button>
+            </div>
+            <div class="accordion-content">
+              <p>사용자 정의 속성 편집기는 자동 출력에 액세스할 수 있으므로, 나중에 플로에서 입력 필드의 옵션으로 업스트림 변수 값을 쉽게 사용할 수 있습니다. 기존에 사용자 정의 속성 편집기는 관리자가 플로 변수에 수동으로 할당한 값에만 액세스할 수 있었습니다.</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <div class="accordion-header">
+              <span>릴리스 업데이트2</span>
+              <button type="button" class="btn-toggle js-toggle">열림</button>
+            </div>
+            <div class="accordion-content">
+              <p>사용자 정의 속성 편집기는 자동 출력에 액세스할 수 있으므로, 나중에 플로에서 입력 필드의 옵션으로 업스트림 변수 값을 쉽게 사용할 수 있습니다. 기존에 사용자 정의 속성 편집기는 관리자가 플로 변수에 수동으로 할당한 값에만 액세스할 수 있었습니다.</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <div class="accordion-header">
+              <span>릴리스 업데이트3</span>
+              <button type="button" class="btn-toggle js-toggle">열림</button>
+            </div>
+            <div class="accordion-content">
+              <p>사용자 정의 속성 편집기는 자동 출력에 액세스할 수 있으므로, 나중에 플로에서 입력 필드의 옵션으로 업스트림 변수 값을 쉽게 사용할 수 있습니다. 기존에 사용자 정의 속성 편집기는 관리자가 플로 변수에 수동으로 할당한 값에만 액세스할 수 있었습니다.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,42 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">slider</h2>
+  <p class="doc_summary">입력 범위 슬라이더를 사용하면 지정된 두 값 사이에 있어야 하는 숫자 값을 지정할 수 있습니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>준비중</li>
+    </ul>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="slide-container">
+    <input type="range" class="input-slider js-slider" value="70" min="1" max="100">
+  </div>
+  <input type="number" class="input-text"></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">비활성</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="slide-container">
+    <input type="range" class="input-slider js-slider" value="30" min="1" max="100" disabled>
+  </div>
+  <input type="number" class="input-text"></textarea>
+    </div>
+  </section>
+</MainLayout>

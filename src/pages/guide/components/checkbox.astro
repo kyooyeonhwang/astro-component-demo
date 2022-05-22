@@ -1,0 +1,112 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">checkbox</h2>
+  <p class="doc_summary">Checkbox는 목록에 선택할 항목이 여러 개 있을 때 사용됩니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>여러 옵션에서 여러 값을 선택하는데 사용됩니다.</li>
+      <li>Checkbox을 하나만 사용하는 경우 Switch를 사용하여 두 상태를 전환하는 것과 같습니다. 차이점은 Switch가 상태 변경을 직접 트리거하지만 Checkbox는 상태를 변경됨으로 표시하며 이 내용을 제출해야 한다는 것입니다.</li>
+    </ul>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><span class="checkbox-txt">
+    <input type="checkbox" id="chk-label011-01" checked>
+    <label for="chk-label011-01">체크박스1</label>
+  </span>
+  <span class="checkbox-txt">
+    <input type="checkbox" id="chk-label011-02">
+    <label for="chk-label011-02">체크박스2</label>
+  </span>
+  <span class="checkbox-txt">
+    <input type="checkbox" id="chk-label011-03">
+    <label for="chk-label011-03">체크박스3</label>
+  </span></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">비활성</h3>
+    <div class="code_preview">
+      <span class="checkbox-txt">
+        <input type="checkbox" id="chk-label012-01" checked disabled>
+        <label for="chk-label012-01">체크박스1</label>
+      </span>
+      <span class="checkbox-txt">
+        <input type="checkbox" id="chk-label012-02" disabled>
+        <label for="chk-label012-02">체크박스1</label>
+      </span>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">라벨 텍스트가 없는 경우</h3>
+    <div class="code_preview">
+      <div class="checkbox-group">
+        <span class="checkbox-txt txt-without">
+          <input type="checkbox" id="chk-label013-01" checked>
+          <label for="chk-label013-01">체크박스1</label>
+        </span>
+        <span class="checkbox-txt txt-without">
+          <input type="checkbox" id="chk-label013-02">
+          <label for="chk-label013-02">체크박스1</label>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">버튼 그룹</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="checkbox-btn-group">
+    <span class="checkbox-item">
+      <input type="checkbox" class="input-checkbox" id="chk-label02-01">
+      <label for="chk-label02-01">월요일</label>
+    </span>
+    <span class="checkbox-item">
+      <input type="checkbox" class="input-checkbox" id="chk-label02-02">
+      <label for="chk-label02-02">화요일</label>
+    </span>
+    <span class="checkbox-item">
+      <input type="checkbox" class="input-checkbox" id="chk-label02-03">
+      <label for="chk-label02-03">수요일</label>
+    </span>
+  </div></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">레이아웃</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="checkbox-group fullsize">
+    <span class="checkbox-txt">
+      <input type="checkbox" id="chk-label041-01" checked>
+      <label for="chk-label041-01">체크박스1</label>
+    </span>
+    <span class="checkbox-txt">
+      <input type="checkbox" id="chk-label041-02">
+      <label for="chk-label041-02">체크박스2</label>
+    </span>
+    <span class="checkbox-txt">
+      <input type="checkbox" id="chk-label041-03">
+      <label for="chk-label041-03">체크박스3</label>
+    </span>
+  </div></textarea>
+    </div>
+  </section>
+</MainLayout>

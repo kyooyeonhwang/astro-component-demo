@@ -1,0 +1,76 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+  <h2 class="doc_h2">color</h2>
+  <p class="doc_summary">준비중</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <ul class="color_group">
+      <li>
+        <div class="color_item color-primary"></div>
+        <div class="color_name">primary</div>
+      </li>
+      <li>
+        <div class="color_item color-base"></div>
+        <div class="color_name">primary</div>
+      </li>
+      <li>
+        <div class="color_item color-etc"></div>
+        <div class="color_name">primary</div>
+      </li>
+    </ul>
+  </section>
+  <section class="doc_section">
+    <h3 class="doc_h3">클래스명 / 변수명</h3>
+    <table class="doc_datatable">
+      <col width="15%">
+      <col width="20%">
+      <col width="20%">
+      <col width="auto">
+      <thead>
+        <tr>
+          <th>색상</th>
+          <th>CSS</th>
+          <th>SCSS</th>
+          <th>부가설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="doc_cell_center">
+            <span class="doc_color_item color-black"></span>
+          </th>
+          <td><code class="doc_code_inline">.color-black</code></td>
+          <td><code class="doc_code_inline">$color-black</code></td>
+          <td>준비중</td>
+        </tr>
+        <tr>
+          <th class="doc_cell_center">
+            <span class="doc_color_item color-red"></span>
+          </th>
+          <td><code class="doc_code_inline">.color-red</code></td>
+          <td><code class="doc_code_inline">$color-red</code></td>
+          <td>준비중</td>
+        </tr>
+        <tr>
+          <th class="doc_cell_center">
+            <span class="doc_color_item color-blue"></span>
+          </th>
+          <td><code class="doc_code_inline">.color-blue</code></td>
+          <td><code class="doc_code_inline">$color-blue</code></td>
+          <td>준비중</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <ul>
+      <li><code class="doc_code_inline">$color-primary</code> : #000000</li>
+      <li><code class="doc_code_inline">$color-black</code> : #000000</li>
+      <li><code class="doc_code_inline">$color-black</code> : #000000</li>
+    </ul> -->
+  </section>
+</MainLayout>

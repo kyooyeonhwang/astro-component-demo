@@ -1,0 +1,39 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">alert</h2>
+  <p class="doc_summary">알림은 중요하고 때로는 시간에 민감한 변경 사항에 대해 사용자에게 계속 알려줍니다.</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>준비중</li>
+    </ul>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_preview">
+      <div class="alert alert-success">
+        <p class="alert-title">성공여부</p>
+        <p class="alert-desc">변경 사항이 저장되었습니다.</p>
+      </div>
+      <div class="alert alert-info">
+        <p class="alert-title">정보 상태</p>
+        <p class="alert-desc">워드프레스가 오래되었습니다.</p>
+      </div>
+      <!-- <div class="alert alert-warning">
+        warning
+      </div> -->
+      <div class="alert alert-error">
+        <p class="alert-title">에러 상태</p>
+        <p class="alert-desc">변경 사항을 저장하는 중에 문제가 발생했습니다.</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,102 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description="Hey! This is Astromnl a simple Astro blog template.">
+
+  <h3 class="doc_h3">기본</h3>
+  <div class="code_preview">
+    <form action="">
+      <div class="form-group">
+        <div class="form-item">
+          <label for="tempLabel0101" class="form-label">이름</label>
+          <div class="input-text-item">
+            <input type="text" class="input-text" id="tempLabel0101">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0102" class="form-label">나이</label>
+          <div class="input-text-item">
+            <input type="text" class="input-text" id="tempLabel0102">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabelEmail" class="form-label">이메일</label>
+          <div class="input-text-item email-list-wrap js-email-list">
+            <input type="email" class="input-text" id="tempLabelEmail" autocomplete="off">
+            <div class="email-list-group">
+              <ul class="email-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0103" class="form-label">주민등록번호</label>
+          <div class="input-text-item">
+            <input type="text" class="input-text input-size-s" id="tempLabel0103" title="주민등록번호 앞 6자리" maxlength="6" inputmode="numeric" pattern="[0-9]*"> -
+            <input type="password" class="input-text input-size-s" id="tempLabel01032" title="주민등록번호 뒤 7자리" maxlength="7" inputmode="numeric" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0105" class="form-label">새 비밀번호</label>
+          <div class="input-text-item">
+            <input type="password" class="input-text" id="tempLabel0105" autocomplete="new-password">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0104" class="form-label">내용</label>
+          <div class="input-text-item">
+            <textarea placeholder="Placeholder text..." class="input-text texta" id="tempLabel0104"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="submit" class="btn btn-primary large">확인</button>
+        <button type="button" class="btn large">취소</button>
+      </div>
+    </form>
+  </div>
+  <div class="alert alert-warning">
+    <p>
+      <strong>새 비밀번호</strong>에서 <code class="doc_code_inline">autocomplete="new-password"</code> 속성을 사용한 이유는 브라우저가 기존 비밀번호를 자동완성으로 채우는 것을 피하기 위해입니다.
+    </p>
+  </div>
+  </section>
+  <section class="doc_section">
+  <h3 class="doc_h3">레이아웃(세로형)</h3>
+  <div class="code_preview">
+    <form action="">
+      <div class="form-group vertical">
+        <div class="form-item">
+          <label for="tempLabel0201" class="form-label">이름</label>
+          <div class="input-text-item">
+            <input type="text" class="input-text" id="tempLabel0201">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0202" class="form-label">나이</label>
+          <div class="input-text-item">
+            <input type="text" class="input-text" id="tempLabel0202">
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="tempLabel0203" class="form-label">내용</label>
+          <div class="input-text-item">
+            <textarea placeholder="Placeholder text..." class="input-text texta" id="tempLabel0203"></textarea>
+            <p aria-live="polite" class="character-count">
+              <span class="count">0</span>
+              / 1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="submit" class="btn btn-primary large">확인</button>
+        <button type="button" class="btn large">취소</button>
+      </div>
+    </form>
+  </div>
+  </section>
+</MainLayout>

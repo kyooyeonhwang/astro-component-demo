@@ -1,0 +1,158 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">input</h2>
+  <p class="doc_summary">텍스트 입력은 사용자가 문자, 숫자 또는 기호의 조합을 입력할 수 있게 해줍니다. 텍스트 입력 상자는 한 줄 또는 여러 줄에 걸쳐 있을 수 있습니다.</p>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><input type="text" placeholder="Placeholder text..." class="input-text"></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">대화형 데모</h3>
+    <div class="doc_input_modifier_wrap js_input_modifiers">
+      <div class="code_preview">
+        <input type="text" placeholder="Placeholder text..." class="input-text" aria-required="true" aria-invalid="true" aria-describedby="error-text">
+        <!-- <p role="alert" class="input-alert-help" id="error-text">툭수 문자는 _ 만 사용 가능합니다.</p> -->
+      </div>
+      <div class="doc_input_modifiers">
+        <div class="checkbox-group fullsize">
+          <span class="checkbox-txt">
+            <input type="checkbox" value="disabled" id="chkModifier01">
+            <label for="chkModifier01">disabled</label>
+          </span>
+          <span class="checkbox-txt">
+            <input type="checkbox" value="invalid" id="chkModifier02">
+            <label for="chkModifier02">invalid</label>
+          </span>
+          <span class="checkbox-txt">
+            <input type="checkbox" value="readonly" id="chkModifier03">
+            <label for="chkModifier03">readonly</label>
+          </span>
+          <span class="checkbox-txt">
+            <input type="checkbox" value="focus" id="chkModifier04">
+            <label for="chkModifier04">focus</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">Input + Button</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="input-text-item">
+    <input type="text" placeholder="Placeholder text..." class="input-text">
+    <button class="btn">검색</button>
+  </div>
+  <hr class="doc_clear">
+  <div class="input-text-item type-password js-password-item">
+    <input type="password" placeholder="Placeholder text..." class="input-text">
+    <button class="btn-password js-btn-password" aria-pressed="false">
+      <i class="icon icon-hide"></i>
+    </button>
+  </div></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">Input + Icon</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><div class="input-text-item type-search">
+    <i class="icon icon-search"></i>
+    <input type="text" placeholder="Placeholder text..." class="input-text">
+  </div></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">Type 속성들</h3>
+    <ul class="doc_list">
+      <li>
+        <code class="doc_code_inline">text</code>
+        <code class="doc_code_inline">password</code>
+        <code class="doc_code_inline">email</code>
+        <code class="doc_code_inline">search</code>
+        <code class="doc_code_inline">tel</code>
+        <code class="doc_code_inline">number</code>
+        <code class="doc_code_inline">url</code>
+      </li>
+      <li>모바일에서 사용성을 위해서도 중요한 속성입니다. (<a href="https://better-mobile-inputs.netlify.app/" target="_blank">모바일 가상 키보드 체험</a>)</li>
+    </ul>
+    <table class="doc_datatable">
+      <col width="20%">
+      <col width="15%">
+      <col width="auto">
+      <thead>
+        <tr>
+          <th>미리보기</th>
+          <th>타입</th>
+          <th>부가설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td><input type="text" class="input-text"></td>
+          <td>text</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="password" value="0000" class="input-text"></td>
+          <td>password</td>
+          <td></td>
+        </tr> -->
+        <tr>
+          <td><input type="email" value="test@test.com" class="input-text"></td>
+          <td>email</td>
+          <td>이메일 주소를 최대한 쉽게 입력할 수 있도록 .com 및 기타 편리한 버튼뿐만 아니라 @ 기호를 추가합니다.</td>
+        </tr>
+        <tr>
+          <td><input type="email" value="검색 키워드" class="input-text"></td>
+          <td>search</td>
+          <td>준비중</td>
+        </tr>
+        <tr>
+          <td><input type="tel" value="01012345678" class="input-text"></td>
+          <td>tel</td>
+          <td>숫자 키패드를 제공합니다</td>
+        </tr>
+        <tr>
+          <td><input type="text" value="10" class="input-text" inputmode="numeric" pattern="[0-9]*"></td>
+          <td>number</td>
+          <td>
+            <code class="doc_code_inline">inputmode="numeric" pattern="[0-9]*</code><br>
+            다음과 같은 이유로 number 속성값을 사용하지 않습니다.<br>
+            <a href="https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/" target="_blank">GOV.UK 디자인 시스템 팀이 숫자의 입력 유형을 변경한 이유</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="url" value="https://www.naver.com" class="input-text"></td>
+          <td>url</td>
+          <td>준비중</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">TextArea</h3>
+    <div class="code_preview">
+      <textarea placeholder="Placeholder text..." class="input-text"></textarea>
+    </div>
+  </section>
+</MainLayout>

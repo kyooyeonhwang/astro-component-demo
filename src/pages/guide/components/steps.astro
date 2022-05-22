@@ -1,0 +1,42 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">steps</h2>
+  <p class="doc_summary">Step은 사용자에게 작업 단계를 안내하는 탐색 모음입니다.</p>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <section class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><ul class="step-group type01">
+    <li class="is-finshed">
+      <div class="step-item">
+        <p>주문</p>
+      </div>
+    </li>
+    <li class="is-finshed">
+      <div class="step-item">
+        <p>배송</p>
+      </div>
+    </li>
+    <li class="is-actived">
+      <div class="step-item">
+        <p>지불</p>
+      </div>
+    </li>
+    <li>
+      <div class="step-item">
+        <p>완료</p>
+      </div>
+    </li>
+  </ul></textarea>
+    </section>
+  </section>
+</MainLayout>
