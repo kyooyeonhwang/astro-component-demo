@@ -1,15 +1,8 @@
-// Full Astro Configuration API Documentation:
-// https://docs.astro.build/reference/configuration-reference
+// astro.config.mjs
+import { defineConfig } from 'astro/config'
 
-// @type-check enabled!
-// VSCode and other TypeScript-enabled text editors will provide auto-completion,
-// helpful tooltips, and warnings if your exported object is invalid.
-// You can disable this by removing "@ts-check" and `@type` comments below.
-
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ (
-	{
-		// Set "renderers" to "[]" to disable all default, builtin component support.
-		// renderers: [],
-	}
-);
+export default defineConfig({
+  server: {port: 8888, host: true}
+  // your configuration options here...
+  // https://docs.astro.build/en/reference/configuration-reference/
+})
