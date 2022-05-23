@@ -7,7 +7,7 @@
     "build:sass": "sass src/scss:public/css",
     "watch:sass": "sass --watch src/scss:public/css",
     "start": "npm-run-all --parallel dev watch:sass",
-    "build": "astro build src/scss:public/css",
+    "build": "astro build:sass",
     "preview": "astro preview"
   },
   "devDependencies": {
