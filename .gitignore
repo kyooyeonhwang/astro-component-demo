@@ -3,8 +3,11 @@ node_modules
 
 # build artefacts
 dist
+
 *.css
 *.css.map
+
+public
 
 # secrets and errors
 .env
