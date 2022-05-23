@@ -3,7 +3,7 @@ node_modules
 
 # build artefacts
 dist
-# *.css
+*.css
 *.css.map
 
 # secrets and errors
