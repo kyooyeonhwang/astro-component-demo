@@ -3,12 +3,14 @@ html, body {
   height: 100%;
 }
 
-ul, ol, li {
-  list-style-type: none;
+body {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-button {
-  font-family: Pretendard, sans-serif;
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 a, a:link {
