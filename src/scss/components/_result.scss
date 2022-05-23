@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.result {
+  position: relative;
+  padding: 20px 30px;
+  text-align: center;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: auto 100%;
+  }
+  &.result-404 {
+    &::before {
+      background-image: url('#{$imageIconPath}/page_error_404.svg');
+    }
+  }
+  &.success-404 {
+    &::before {
+      height: 200px;
+      background-image: url('#{$imageIconPath}/page_success.svg');
+    }
+  }
+  .result-tit {
+    font-size: 22px;
+  }
+  .btn-group {
+    margin-top: 30px;
+  }
+}

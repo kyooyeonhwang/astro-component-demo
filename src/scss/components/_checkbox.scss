@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.checkbox-group {
+  display: flex;
+  &.fullsize {
+    display: block;
+    .checkbox-txt {
+      display: flex;
+      width: 100%;
+      & ~ .checkbox-txt {
+        margin-top: 9px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+.checkbox-txt {
+  position: relative;
+  display: inline-flex;
+  min-height: 16px;
+  align-items: center;
+  &  ~ .checkbox-txt {
+    margin-left: 10px;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    & + label {
+      position: relative;
+      padding-left: 24px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #222222;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 15px auto;
+        transform: translateY(-50%);
+      }
+    }
+    &:checked {
+      & + label {
+        &::before {
+          background-image: url('#{$imageIconPath}/checkbox.svg');
+        }
+      }
+    }
+    &:focus {
+      & + label {
+        &::before {
+          box-shadow: 0 0 2px 2px #1890ff;
+        }
+      }
+    }
+    &:disabled {
+      & + label {
+        cursor: not-allowed;
+        &::before {
+          border-color: #e4e4e4;
+        }
+      }
+      &:checked {
+        & + label {
+          ::before {
+            background-image: url('#{$imageIconPath}/checkbox_disabled.svg');
+          }
+        }
+      }
+    }
+  }
+  &.txt-without {
+    > label {
+      font-size: 0;
+      color: transparent;
+    }
+  }
+}
+
+.checkbox-btn-group {
+  display: flex;
+  .checkbox-item {
+    & ~ .checkbox-item {
+      margin-left: -1px;
+    }
+  }
+}
+
+.checkbox-item {
+  position: relative;
+  flex: 1 1 100%;
+  > .input-checkbox {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    &:checked {
+      & + label {
+        color: #eee;
+        background: #888;
+      }
+    }
+    &:focus {
+      & + label {
+        box-shadow: 0 0 2px 2px #1890ff;
+      }
+    }
+  }
+  > label {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    border: 1px solid #767676;
+  }
+}

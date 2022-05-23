@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Input */
+.input-text {
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #d9d9d9;
+  &:focus {
+    box-shadow: 0 0 2px 2px #1890ff;
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    user-select: none;
+  }
+  &.is-invalid {
+    border-color: red;
+  }
+}
+.input-text-item {
+  position: relative;
+  display: inline-flex;
+  &.type-search {
+    > .icon-search {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    > input {
+      padding-left: 35px;
+    }
+  }
+  .btn-password {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    padding: 3px;
+    border: 0 none;
+    background-color: transparent;
+    transform: translateY(-50%);
+    .icon-show,
+    .icon-hide {
+      vertical-align: top;
+    }
+  }
+}
+.input-alert-help {
+  margin-top: 6px;
+  color: #a94442;
+}
+
+/* Textarea */
+.texta {
+  height: 150px;
+  padding: 10px;
+}
+  // .input-text:focus {
+  // }
+  // .input-text[disabled] {
+  //   cursor: not-allowed;
+  //   user-select: none;
+  // }
+  // .input-text.is-invalid {
+  //   border-color: red;
+  // }
+  // .input-text-item {
+  //   display: flex;
+  // }
+  // .input-alert-help {
+  //   margin-top: 6px;
+  //   color: #a94442;
+  // }
+
+  // .texta {
+  //   height: 150px;
+  //   padding: 10px;
+  // }

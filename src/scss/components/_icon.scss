@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+.icon-buy {
+  width: 20px;
+  height: 20px;
+  background-image: url('#{$imageIconPath}/buy_shop.svg');
+  background-size: 100% auto;
+}
+.icon-search {
+  width: 20px;
+  height: 20px;
+  background-image: url('#{$imageIconPath}/search.svg');
+}
+.icon-show {
+  width: 17px;
+  height: 17px;
+  background-image: url('#{$imageIconPath}/see_show.svg');
+}
+.icon-hide {
+  width: 17px;
+  height: 17px;
+  background-image: url('#{$imageIconPath}/see_hide.svg');
+}

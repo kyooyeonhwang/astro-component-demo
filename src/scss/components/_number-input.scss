@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.shopping-cart-group {
+  .btn-decrement,
+  .btn-increment	{
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    vertical-align: middle;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 60% auto;
+    }
+    &:disabled {
+      &::before {
+        opacity: .5;
+      }
+    }
+  }
+  .btn-decrement {
+    &::before {
+      background-image: url('#{$imageIconPath}/number_minus.svg');
+    }
+  }
+  .btn-increment {
+    &::before {
+      background-image: url('#{$imageIconPath}/number_plus.svg');
+    }
+  }
+  .input-counter {
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+

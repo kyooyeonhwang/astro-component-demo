@@ -1,0 +1,51 @@
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-width: 50px;
+  padding: 4px 14px;
+  border: 1px solid #d9d9d9;
+  font-size: 16px;
+  box-shadow: 0 2px #00000004;
+  background-color: #fff;
+  background-origin: border-box;
+}
+a.btn {
+  text-decoration: none;
+}
+.btn.small {
+  font-size: 12px;
+}
+.btn.large {
+  padding: 8px 17px;
+  font-size: 18px;
+}
+.btn > .icon {
+  margin-right: 4px;
+}
+
+.btn-primary,
+a.btn-primary {
+  color: #fff;
+  border-color: transparent;
+  background-color: $color-primary;
+}
+.btn-secondary {
+  border-color: transparent;
+  background-color: #666;
+}
+.btn-destructive {
+  color: #fff;
+  border-color: transparent;
+  background-color: #ba0517;
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn-group > a,
+.btn-group > button {
+  margin: 0 5px;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// Z-index values
+$base: 0;
+$above: 1; // 기준 위의 모든 값에 이것을 사용하십시오.
+$below: -1; // 그리고 이것은 기본 아래의 모든 값에 대해
+
+// Page Layout
+$zLayoutNavigation: $above + $base;
+$zLayoutFooter: $above + $base;
+$zLayoutModal: $above + $zLayoutNavigation;
+$zLayoutPopUpAd: $above + $zLayoutModal;
+
+// NavMenu
+$zNavMenuBackdrop: $below + $base;
+$zNavMenuPopover: $above + $base;
+$zNavMenuToggle: $above + $zNavMenuPopover;
+
+
