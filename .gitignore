@@ -7,7 +7,7 @@ dist
 *.css
 *.css.map
 
-public
+# public
 
 # secrets and errors
 .env

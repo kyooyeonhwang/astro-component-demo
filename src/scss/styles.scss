@@ -2,7 +2,6 @@
 
 html, body {
   height: 100%;
-  background-color: #eee;
 }
 
 body {
@@ -159,7 +158,7 @@ td .doc_logo {
 
 .doc_visual {
   height: 300px;
-  background: url('/assets/img/icon/undraw_team_collaboration.svg') no-repeat 50% 0;
+  background: url('/images/icon/undraw_team_collaboration.svg') no-repeat 50% 0;
   background-size: auto 100%;
 }
 
@@ -368,10 +367,10 @@ td .doc_logo {
     box-shadow: -2px 2px 0 0 rgba(0, 0, 0, 0.08);
     font-size:0;
     text-align:center;
-    background: url('/assets/img/icon/code_copy.svg') no-repeat 50% 50%;
+    background: url('/images/icon/code_copy.svg') no-repeat 50% 50%;
     background-size: 80% auto;
     &.active {
-      background-image: url('/assets/img/icon/code_check.svg');
+      background-image: url('/images/icon/code_check.svg');
       background-size: 50% auto;
     }
   }
