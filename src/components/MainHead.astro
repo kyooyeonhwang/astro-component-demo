@@ -14,16 +14,17 @@ const { title, description, permalink } = Astro.props
 <meta name="description" content={description}>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+<link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/components.css">
-<script src="/js/libs/polyfill.min.js" is:inline></script>
-<script src="/js/libs/bliss.js" is:inline></script>
-<script src="/js/libs/jquery.min.js" is:inline></script>
-<script src="/js/libs/codemirror.js" is:inline></script>
-<script src="/js/libs/xml.js" is:inline></script>
-<script src="/js/libs/javascript.js" is:inline></script>
-<script src="/js/libs/css.js" is:inline></script>
-<script src="/js/libs/htmlmixed.js" is:inline></script>
-<script src="/js/uiguide.js" is:inline></script>
-<script src="/js/app.js" is:inline></script>
+<script src="/js/libs/polyfill.min.js" type="module" is:inline></script>
+<script src="/js/libs/bliss.js" type="module" is:inline></script>
+<script src="/js/libs/jquery.min.js" type="module" is:inline></script>
+<script src="/js/libs/codemirror.js" type="module" is:inline></script>
+<script src="/js/libs/xml.js" type="module" is:inline></script>
+<script src="/js/libs/javascript.js" type="module" is:inline></script>
+<script src="/js/libs/css.js" type="module" is:inline></script>
+<script src="/js/libs/htmlmixed.js" type="module" is:inline></script>
+<script src="/js/uiguide.js" type="module" is:inline></script>
+<script src="/js/app.js" type="module" is:inline></script>

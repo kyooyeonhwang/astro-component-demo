@@ -30,8 +30,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.getSelection().removeAllRanges();
   })
   
-    $('.ui_code_content').each(function(index, elem){
-      var $this = $(this);
+  $('.ui_code_content').each(function(index, elem){
+    var $this = $(this);
     if($(this).hasClass('css') === true){
       var editor = CodeMirror.fromTextArea(elem, {
         mode: 'text/css',
@@ -39,23 +39,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
     } else if($(this).hasClass('html') === true) {
       var delay;
-          var editor = CodeMirror.fromTextArea(elem, {
+      var editor = CodeMirror.fromTextArea(elem, {
         mode: 'text/html',
         tabMode: 'indent'
-        // onChange: function() {
-        // 	clearTimeout(delay);
-        // 	delay = setTimeout(updatePreview, 300);
-        // }
       });
-          editor.on("change", function() {
-              clearTimeout(delay);
-              delay = setTimeout(updatePreview, 300);
-          });
-          function updatePreview() {
-              var preview = $this.prev().prev();
-              preview.html(editor.getValue());
-          }
-          setTimeout(updatePreview, 300);
+      
+      editor.on("change", function() {
+        clearTimeout(delay);
+        delay = setTimeout(updatePreview, 300);
+      });
+      function updatePreview() {
+        var preview = $this.prev().prev();
+        preview.html(editor.getValue());
+      }
+      setTimeout(updatePreview, 300);
     }
   });
 })
