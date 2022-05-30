@@ -1,13 +1,23 @@
 ---
 // Layout Import
-import MainLayout from '../../layouts/MainLayout.astro'
+import Layout from '../../layouts/Layout.astro'
 
+const title = '프로젝트 현황판';
+const description = '프로젝트 현황판';
 ---
-<MainLayout 
-  title="퍼블리싱 가이드" 
-  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+<Layout {title} {description}>
   <h2 class="doc_h2">프로젝트 현황판</h2>
-  <p class="doc_summary">
-    준비중
-  </p>
-</MainLayout>
+  <!-- <button type="button" class="mobile_emulator_display" id="ui_mobile_emulator">모바일 에뮬레이터</button> -->
+  <div class="state_board" id="app">
+    <table class="datatable"></table>
+    <div class="mobile_emulator">
+      <div class="mobile_emulator_inner">
+        <iframe src="/uiguide/mobile/board_2.html" frameborder="0" scrolling="yes" name="myiframe" id="myiframe"></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- <p>https://larsjung.de/jquery-qrcode/</p>  -->
+  <ul>
+    <li><a href="https://docs.google.com/spreadsheets/d/13bHbrh4cjnChodL8T3otMhFrRDYUNgduoywxr3EopRc/edit#gid=0" target="_blank">현황판에 사용되는 구글 시트 URL</a></li>
+  </ul>
+</Layout>

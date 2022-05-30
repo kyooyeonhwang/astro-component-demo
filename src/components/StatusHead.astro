@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  permalink?: string;
+}
+
+const { title, description, permalink } = Astro.props
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script src="/js/libs/jquery.min.js" type="module" is:inline></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.0.1/dist/sheetrock.min.js" type="module" is:inline></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.7/js/jquery.dataTables.min.js" type="module" is:inline></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.14.0/jquery-qrcode.min.js" type="module" is:inline></script>

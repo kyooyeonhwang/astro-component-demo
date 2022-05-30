@@ -1,24 +1,23 @@
 ---
 import Header from '../components/Header.astro'
+import Sidebar from '../components/Sidebar.astro'
 import Footer from '../components/Footer.astro'
-import MainHead from '../components/MainHead.astro'
-import FontStyleCustom from '../components/FontStyleCustom.astro'
+import StatusHead from '../components/StatusHead.astro'
 
 const { title, description, head } = Astro.props;
 ---
 <html lang="ko">
   <head>
-    {head}
-    <MainHead title={title} description={description} />
+    <StatusHead title={title} description={description} />
   </head>
-  <body>
+  <body id="doc_guide_page">
+    <div id="doc_container">
       <Header/>
-      <main>
-        <FontStyleCustom/>
+      <main class="state_board_contents">
         <slot />
-        
       </main>
       <Footer />
-  <script src="/js/app.js"></script>
+    </div>
+    <script src="/js/status.js" type="module" is:inline></script>
   </body>
 </html>
