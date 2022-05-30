@@ -109,7 +109,7 @@ a, a:link {
       }
     }
   }
-  tbody .zepline,
+  tbody .figma,
   tbody .planner,
   tbody .date_01,
   tbody .author
@@ -159,9 +159,19 @@ a, a:link {
     margin-left: 10px;
   }
   .figma {text-align:center;}
-  .figma a {display:inline-block;width:30px;height:30px;font-size:0;color:rgba(0,0,0,0);}
+  .figma a {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    font-size:0;
+    color:rgba(0,0,0,0);
+  }
   .figma :empty {display:none;}
-  .figma a:not(:empty) {vertical-align:top;background:url('');background-size:100%;}
+  .figma a:not(:empty) {
+    vertical-align:top;
+    background:url('/images/figma_logo.svg');
+    background-size:100%;
+  }
 }
 table .screenid,
 table .author,

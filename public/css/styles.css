@@ -108,7 +108,7 @@ a, a:link {
 #app table tbody td {
   font-size: 14px;
 }
-#app tbody .zepline,
+#app tbody .figma,
 #app tbody .planner,
 #app tbody .date_01,
 #app tbody .author {
@@ -247,7 +247,7 @@ a, a:link {
 }
 #app .figma a:not(:empty) {
   vertical-align: top;
-  background: url("");
+  background: url("/images/figma_logo.svg");
   background-size: 100%;
 }
 

@@ -52,7 +52,7 @@ function makeSortable(error, options, response) {
       null,
       {className: "screen_id"},
       {className: "emulator"},
-      {className: "zepline"},
+      {className: "figma"},
       {className: "planner"},
       {className: "date_01"},
       {className: "comment"},
