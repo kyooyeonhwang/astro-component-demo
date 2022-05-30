@@ -1,11 +1,33 @@
 ---
 // Layout Import
-import MainLayout from '../layouts/MainLayout.astro'
+import Layout from '../layouts/Layout.astro'
 
 // 메타데이터
 const title = '프로젝트 현황판'
 const  description = '프로젝트 현황판, UI 가이드'
 ---
-<MainLayout {title} {description}>
-  <h1>ui guide</h1>
-</MainLayout>
+<Layout {title} {description}>
+  <div class="home_page">
+    <h1>소개</h1>
+    <p></p>
+    <ul class="home_link">
+      <li>
+        <div class="group">
+          <span>현황판</span>
+          <p>프로젝트 페이지를 공유하기 위한 목적으로 만들어졌습니다. <br>
+            퍼블리셔뿐만 아니라 기획, 디자인, 개발등 프로젝트 팀원들이 현업을 위해 볼 수 있을뿐만 아니라 
+            개발파트에 넘기기전 확인 용도이기도 합니다. 
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="group">
+          <span>UI 가이드</span>
+          <p>Foundation, component, Page등으로 구성되어 있습니다.<br>
+            공통요소를 관리하기 위한 가이드입니다.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</Layout>
