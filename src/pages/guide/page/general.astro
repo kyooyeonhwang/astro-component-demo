@@ -1,0 +1,32 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro'
+
+---
+<MainLayout 
+  title="퍼블리싱 가이드" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+
+  <h2 class="doc_h2">general</h2>
+  <p class="doc_summary">준비중</p>
+  <section class="doc_section">
+    <h3 class="doc_h3">사용 시기</h3>
+    <ul class="doc_list">
+      <li>준비중</li>
+    </ul>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">기본</h3>
+    <div class="code_block">
+      <iframe src="../blank.html" class="code_preview uid-demo uid-demo-iframe"></iframe>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content iframe ui_code_content">
+<div class="login-container">
+  login area
+</div>
+
+      </textarea>
+    </div>
+  </section>
+</MainLayout>
