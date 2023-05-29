@@ -348,7 +348,11 @@ td .doc_logo {
     border-bottom: 1px solid #222222;
     margin-bottom: 30px;
     font-size: 18px;
+    line-height: 1.5;
     color: #222;
+  }
+  .source-link {
+    font-size: 14px;
   }
 }
 .doc_section {

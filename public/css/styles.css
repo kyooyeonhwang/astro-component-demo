@@ -3,6 +3,10 @@ html, body {
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -419,7 +423,11 @@ td .doc_logo {
   border-bottom: 1px solid #222222;
   margin-bottom: 30px;
   font-size: 18px;
+  line-height: 1.5;
   color: #222;
+}
+#doc_contents .source-link {
+  font-size: 14px;
 }
 
 .doc_section {
@@ -512,6 +520,7 @@ td .doc_logo {
 }
 
 .code_preview {
+  width: 100%;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -641,6 +650,7 @@ Foundation
 
 .doc_input_modifier_wrap .code_preview {
   flex: 1;
+  width: 100%;
 }
 .doc_input_modifier_wrap .doc_input_modifiers {
   width: 150px;
