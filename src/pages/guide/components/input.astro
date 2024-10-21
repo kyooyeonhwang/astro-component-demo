@@ -15,7 +15,9 @@ import MainLayout from '../../../layouts/MainLayout.astro'
     <div class="code_block">
       <div class="code_preview"></div>
       <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
-      <textarea class="code_content html ui_code_content"><input type="text" placeholder="Placeholder text..." class="input-text"></textarea>
+      <textarea class="code_content html ui_code_content"><label for="lbEmail01">Email</label>
+<input type="text" placeholder="Placeholder text..." class="input-text" id="lbEmail01">
+<p class="feedback-text">Invalid email message.</p></textarea>
     </div>
   </section>
 
@@ -73,9 +75,13 @@ import MainLayout from '../../../layouts/MainLayout.astro'
     <div class="code_block">
       <div class="code_preview"></div>
       <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
-      <textarea class="code_content html ui_code_content"><div class="input-text-item type-search">
-  <i class="icon icon-search"></i>
+      <textarea class="code_content html ui_code_content">
+<div class="input-text-item type-search leading-icon trailing-icon">
+  <i class="icon icon-lock leading" aria-hidden="true"></i>
   <input type="text" placeholder="Placeholder text..." class="input-text">
+  <button type="button" class="trailing">
+    <i class="icon icon-hide" aria-hidden="true"></i>
+  </button>
 </div></textarea>
     </div>
   </section>
