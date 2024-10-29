@@ -8,6 +8,7 @@ html, body {
 }
 body {
   font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  background-color: #fafafa;
 }
 
 ul, ol, li {
@@ -21,39 +22,55 @@ a, a:link {
 }
 
 #doc_container {
+  max-width: 1400px;
   height: 100%;
+  margin: auto;
 }
 #doc_header {
   position: relative;
   z-index: 10;
   display: flex;
   align-items: center;
-  height: 50px;
-  padding: 0 30px;
-  background-color: rgba(37, 47, 62, .9);
-  box-shadow: 0 5px 0 2px rgba(0,0,0,.05);
+  height: 70px;
+  padding: 0 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
   .doc_logo,
   .doc_logo a,
   .doc_logo a:hover {
-    font-weight: bold;
-    font-size: 18px;
-    font-family: Pretendard, sans-serif;
-    color: #fff;
+    font: bold 18px/1 Pretendard, sans-serif;
+    text-transform: uppercase;
+    color: #444444;
     text-decoration: none;
+  }
+  .doc_logo a {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      display: flex;
+      align-self: center;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 3px;
+      vertical-align: middle;
+      background-color: #000;
+    }
   }
   .login_group {
     display: flex;
-    position: absolute;
-    right: 30px;
-    bottom: 0;
+    gap: 5px;
+    margin-left: auto;
     > a,
     > button {
       padding: 10px 20px;
       border: 0 none;
+      border-radius: 100vmin;
       font-size: 15px;
       color: rgba(255, 255, 255, 1);
       text-decoration: none;
-      background-color: #005ea2;
+      background-color: rgba(0, 172, 150, 1);
       transition: background-color .3s cubic-bezier(0.39, 0.575, 0.565, 1)
     }
     > a:hover {
@@ -270,6 +287,8 @@ td .doc_logo {
   display: grid;
   grid-template-columns: 250px 1fr;
   min-height: calc(100% - 140px);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 #doc_sidebar {
   overflow: auto;
@@ -278,8 +297,7 @@ td .doc_logo {
   left: 0;
   height: calc(100vh - 50px);
   padding: 20px 0;
-  border-right: 1px solid #d9d9d9;
-  background-color: #f9f7f7;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
   &.is-fixed {
     height: 100vh;
   }
@@ -289,7 +307,7 @@ td .doc_logo {
   a, strong {
     display: block;
     font-size: 18px;
-    color: #222222;
+    color: rgba(23, 23, 23, 1);
     text-decoration: none;
   }
 }
@@ -307,9 +325,12 @@ td .doc_logo {
         margin-top: 5px;
       }
       li {
+        padding: 0 10px;
         a {
-          padding: 8px 20px 8px 30px;
-          font-size: 16px;
+          padding: 9px 10px;
+          border-radius: 4px;
+          font-size: 14px;
+          color: rgba(102, 102, 102, 1);
           > .status {
             padding: 1px 5px;
             border-radius: 3px;
@@ -320,12 +341,11 @@ td .doc_logo {
           }
           &[aria-current],
           &[aria-current]:hover {
-            color: rgb(24, 144, 255);
-            border-right: 3px solid rgb(24, 144, 255);
-            background-color: rgb(230, 247, 255);
+            // color: rgb(24, 144, 255);
+            // border-right: 3px solid rgb(24, 144, 255);
           }
           &:hover {
-            background-color: #fff;
+            background-color: rgba(242, 242, 242, 1);
           }
         }
       }
@@ -334,6 +354,7 @@ td .doc_logo {
 }
 
 .doc_h2 {
+  margin-top: 0;
   margin-bottom: .5em;
   font-size: 40px;
   font-weight: 700;
@@ -342,10 +363,10 @@ td .doc_logo {
   text-transform: capitalize;
 }
 #doc_contents {
-  padding: 40px 20px 0;
+  padding: 40px;
   > .doc_summary {
     padding-bottom: 20px;
-    border-bottom: 1px solid #222222;
+    border-bottom: 1px solid rgba(0,0,0,.09);
     margin-bottom: 30px;
     font-size: 18px;
     line-height: 1.5;
@@ -450,6 +471,7 @@ td .doc_logo {
   width: 100%;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
   &~.code_info {
     border-top: 0 none;
   }
@@ -460,8 +482,6 @@ td .doc_logo {
 .code_info {
   position:relative;
   height:0;
-  // border-top: 1px solid rgba(0, 0, 0, 0.12);
-  // margin-top: -1px;
   .btn_codecopy {
     position:absolute;
     top:0;

@@ -21,10 +21,19 @@ import MainLayout from '../../../layouts/MainLayout.astro'
     <div class="code_block">
       <div class="code_preview"></div>
       <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
-      <textarea class="code_content html ui_code_content"><button type="button" class="btn">취소</button>
-<button type="button" class="btn btn-primary">확인</button>
-<button type="button" class="btn btn-destructive">삭제</button>
-<a href="" class="btn-link">링크 버튼</a></textarea>
+      <textarea class="code_content html ui_code_content"><button type="button" class="btn md btn-primary">Button</button>
+<button type="button" class="btn md btn-neutral">Button</button>
+<button type="button" class="btn md btn-subtle">Button</button></textarea>
+    </div>
+  </section>
+
+  <section class="doc_section">
+    <h3 class="doc_h3">Button Danger</h3>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><button type="button" class="btn md btn-primary danger">Button</button>
+<button type="button" class="btn md btn-subtle danger">Button</button></textarea>
     </div>
   </section>
 
@@ -43,32 +52,22 @@ import MainLayout from '../../../layouts/MainLayout.astro'
       </thead>
       <tbody>
         <tr>
-          <td><button type="button" class="btn">취소</button></td>
-          <td class="cell_code"><code class="doc_code_inline">.btn</code></td>
-          <td>버튼중에 가장 많이 사용되는 버튼입니다.</td>
-        </tr>
-        <tr>
-          <td><button type="button" class="btn btn-primary">확인</button></td>
+          <td><button type="button" class="btn md btn-primary">Button</button></td>
           <td class="cell_code"><code class="doc_code_inline">.btn-primary</code></td>
           <td>가장 중요한 액션에 사용되는 버튼입니다.<br>
             <code class="doc_code_inline">.btn</code> 기본 클래스에 추가해서 사용합니다.
           </td>
         </tr>
         <tr>
-          <td><button type="button" class="btn btn-destructive">삭제</button></td>
-          <td class="cell_code"><code class="doc_code_inline">.btn-destructive</code></td>
+          <td><button type="button" class="btn md btn-neutral">Button</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-neutral</code></td>
           <td>데이터를 영구적으로 지우는 것과 같은 기능의 버튼<br>
             <code class="doc_code_inline">.btn</code> 기본 클래스에 추가해서 사용합니다.
           </td>
         </tr>
-        <!-- <tr>
-          <td><button type="button" class="btn btn-destructive" disabled>삭제</button></td>
-          <td class="cell_code"><code class="doc_code_inline">.btn-destructive</code></td>
-          <td>데이터를 영구적으로 지우는 것과 같은 기능의 버튼</td>
-        </tr> -->
         <tr>
-          <td><a href="" class="btn-link">링크 버튼</a></td>
-          <td class="cell_code"><code class="doc_code_inline">.btn-link</code></td>
+          <td><button type="button" class="btn md btn-subtle">Button</button></td>
+          <td class="cell_code"><code class="doc_code_inline">.btn-subtle</code></td>
           <td>준비중</td>
         </tr>
       </tbody>
@@ -78,27 +77,23 @@ import MainLayout from '../../../layouts/MainLayout.astro'
   <section class="doc_section">
     <h3 class="doc_h3">사이즈</h3>
     <ul class="doc_list">
-      <li>사이즈는 높이 기준으로 Large, Medium, Small을 가지고 있습니다.</li>
-      <li>기본 사이즈(Medium)를 제외하고 <code class="doc_code_inline">.large</code>, <code class="doc_code_inline">.small</code> 클래스를 요소에 추가해서 사용합니다.</li>
+      <li>사이즈는 높이 기준으로 Medium, Small을 가지고 있습니다.</li>
+      <li>기본 사이즈(Medium)를 제외하고 <code class="doc_code_inline">.small</code> 클래스를 요소에 추가해서 사용합니다.</li>
     </ul>
     <div class="code_preview">
       <div class="doc_radio_group ui_doc_radio_group">
         <span class="doc_radio_item">
-          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size01" data-size="large" checked>
-          <label for="doc_radio_group_size01">Large</label>
+          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size01" data-size="md" checked>
+          <label for="doc_radio_group_size01">Medium</label>
         </span>
         <span class="doc_radio_item">
-          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size02" data-size="">
-          <label for="doc_radio_group_size02">Default</label>
-        </span>
-        <span class="doc_radio_item">
-          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size03" data-size="small">
-          <label for="doc_radio_group_size03">Small</label>
+          <input type="radio" name="doc_radio_group_size" id="doc_radio_group_size02" data-size="sm">
+          <label for="doc_radio_group_size02">Small</label>
         </span>
       </div>
-      <button type="button" class="btn">기본 버튼</button>
-      <button type="button" class="btn btn-primary">확인</button>
-      <button type="button" class="btn btn-destructive">삭제</button>
+      <button type="button" class="btn btn-primary">Button</button>
+      <button type="button" class="btn btn-neutral">Button</button>
+      <button type="button" class="btn btn-subtle">Button</button>
     </div>
   </section>
 
@@ -124,11 +119,41 @@ import MainLayout from '../../../layouts/MainLayout.astro'
 
   <section class="doc_section">
     <h3 class="doc_h3">그룹</h3>
-    <div class="code_preview">
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">확인</button>
-        <button type="button" class="btn">취소</button>
-      </div>
+    <div class="code_block">
+      <div class="code_preview"></div>
+      <div class="code_info"><button class="btn_codecopy ui_btnCodeCopy" data-text-swap="Copy!">Copy to clipboard</button></div>
+      <textarea class="code_content html ui_code_content"><!-- Justify -->
+<div class="btn-group">
+  <button type="button" class="btn md btn-subtle">Button</button>
+  <button type="button" class="btn md btn-primary end">Button</button>
+</div>
+
+<!-- Start(Default) -->
+<div class="btn-group">
+  <button type="button" class="btn md btn-subtle">Button</button>
+  <button type="button" class="btn md btn-primary">Button</button>
+</div>
+
+<!-- End -->
+<div class="btn-group">
+  <button type="button" class="btn md btn-subtle end">Button</button>
+  <button type="button" class="btn md btn-primary">Button</button>
+</div>
+
+<!-- Center -->
+<div class="btn-group center">
+  <button type="button" class="btn md btn-subtle">Button</button>
+  <button type="button" class="btn md btn-primary">Button</button>
+</div>
+
+<!-- Stack -->
+<div class="btn-group stack">
+  <button type="button" class="btn md btn-subtle">Button</button>
+  <button type="button" class="btn md btn-primary">Button</button>
+</div>
+
+</textarea>
     </div>
+
   </section>
 </MainLayout>

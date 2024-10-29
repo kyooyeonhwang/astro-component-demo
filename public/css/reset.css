@@ -153,6 +153,8 @@ input,
 optgroup,
 select,
 textarea {
+  border: 0 none;
+  background-color: #ffffff;
   font-family: inherit;
   /* 1 */
   font-size: 100%;

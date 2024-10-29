@@ -2,7 +2,7 @@
 
 /* Input */
 .input-text {
-  height: 32px;
+  height: 36px;
   padding: 0 10px;
   border: 1px solid #d9d9d9;
   &:focus {
@@ -21,15 +21,37 @@
   position: relative;
   display: inline-flex;
   &.type-search {
-    > .icon-search {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
+    .icon {
+      flex-shrink: 1;
     }
     > input {
       padding-left: 35px;
     }
+  }
+  &.leading-icon {
+    .leading {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+    .input-text {
+      padding-left: 30px;
+    }
+  }
+  &.trailing-icon {
+    .trailing {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      display: inline-flex;
+      align-items: center;
+      transform: translateY(-50%);
+    }
+    .input-text {
+      padding-right: 30px;
+    }
+
   }
   .btn-password {
     position: absolute;

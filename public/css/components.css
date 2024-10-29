@@ -96,9 +96,9 @@
 
 .btn {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   min-width: 50px;
-  padding: 4px 14px;
   border: 1px solid #d9d9d9;
   font-size: 16px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.0156862745);
@@ -110,41 +110,70 @@ a.btn {
   text-decoration: none;
 }
 
-.btn.small {
+.btn.sm {
+  height: 30px;
+  border-radius: 8px;
   font-size: 12px;
 }
 
-.btn.large {
-  padding: 8px 17px;
-  font-size: 18px;
+.btn.md {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 .btn > .icon {
   margin-right: 4px;
 }
 
-.btn-primary,
-a.btn-primary {
-  color: #fff;
+.btn-primary {
   border-color: transparent;
-  background-color: #1890ff;
+  color: #fff;
+  background-color: rgb(44, 44, 44);
+}
+.btn-primary.danger {
+  background-color: rgb(236, 34, 31);
+}
+.btn-primary.danger:hover {
+  background-color: rgb(192, 15, 12);
 }
 
-.btn-secondary {
-  border-color: transparent;
-  background-color: #666;
+.btn-neutral {
+  border-color: rgb(118, 118, 118);
+  color: rgb(30, 30, 30);
+  background-color: rgb(227, 227, 227);
+}
+.btn-neutral:hover {
+  background-color: rgb(205, 205, 205);
 }
 
-.btn-destructive {
-  color: #fff;
+.btn-subtle {
   border-color: transparent;
-  background-color: #ba0517;
+  color: rgb(48, 48, 48);
+}
+.btn-subtle:hover {
+  border-color: rgb(217, 217, 217);
+}
+.btn-subtle.danger {
+  color: rgb(144, 11, 9);
+}
+.btn-subtle.danger:hover {
+  border-color: rgb(144, 11, 9);
 }
 
 .btn-group {
   display: flex;
-  justify-content: center;
   margin-top: 10px;
+}
+.btn-group.center {
+  justify-content: center;
+}
+.btn-group.stack {
+  flex-direction: column;
+}
+.btn-group .end {
+  margin-left: auto;
 }
 
 .btn-group > a,
@@ -257,8 +286,8 @@ a.btn-primary {
   margin-top: 10px;
 }
 .choice-container .choice-item.is-active {
-  border-color: #1890ff;
-  box-shadow: inset 0 0 0 1px #1890ff;
+  border-color: rgb(44, 44, 44);
+  box-shadow: inset 0 0 0 1px rgb(44, 44, 44);
 }
 .choice-container .choice-item > label {
   position: absolute;
@@ -384,14 +413,20 @@ a.btn-primary {
 }
 
 .icon-hide {
-  width: 17px;
-  height: 17px;
-  background-image: url("/images/icon/see_hide.svg");
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgMiIgaWQ9IkxheWVyXzIiPjxwYXRoIGQ9Ik04LDIxYTEsMSwwLDAsMS0uNzEtLjI5bC00LTRhMSwxLDAsMCwxLDAtMS40Mmw1LjE4LTUuMTdhMTAuNTksMTAuNTksMCwwLDEsMTAuODQtMi42QTEsMSwwLDAsMSwyMCw4Ljc4YTEsMSwwLDAsMS0xLjI2LjY0LDguNjYsOC42NiwwLDAsMC04LjgxLDIuMTFMNS40MSwxNmwzLjMsMy4yOWExLDEsMCwwLDEsMCwxLjQyQTEsMSwwLDAsMSw4LDIxWiIvPjxwYXRoIGQ9Ik0xNiwyNUExMC42MSwxMC42MSwwLDAsMSw5LjUsMjIuNzlhMSwxLDAsMSwxLDEuMjItMS41OCw4LjY5LDguNjksMCwwLDAsMTEuNC0uNzRMMjYuNTksMTZsLTQuNDctNC40N2E5LDksMCwwLDAtLjc0LS42NiwxLDEsMCwxLDEsMS4yNC0xLjU2LDguNzcsOC43NywwLDAsMSwuOTEuODFsNS4xOCw1LjE3YTEsMSwwLDAsMSwwLDEuNDJsLTUuMTgsNS4xN0ExMC42MiwxMC42MiwwLDAsMSwxNiwyNVoiLz48cGF0aCBkPSJNMTYsMjBhNCw0LDAsMCwxLTIuNjctMSwxLDEsMCwxLDEsMS4zNC0xLjQ5QTIsMiwwLDAsMCwxNiwxOGEyLDIsMCwwLDAsMi0yLDIsMiwwLDAsMC0uNTEtMS4zM0ExLDEsMCwxLDEsMTksMTMuMzMsNCw0LDAsMCwxLDE2LDIwWiIvPjxwYXRoIGQ9Ik0xMy4xNywxNmExLDEsMCwwLDEtLjMzLS4wNiwxLDEsMCwwLDEtLjYxLTEuMjcsMy45NCwzLjk0LDAsMCwxLDIuNDQtMi40NCwxLDEsMCwwLDEsLjY2LDEuODgsMiwyLDAsMCwwLTEuMjIsMS4yMkExLDEsMCwwLDEsMTMuMTcsMTZaIi8+PHBhdGggZD0iTTgsMjVhMSwxLDAsMCwxLS43MS0uMjksMSwxLDAsMCwxLDAtMS40MmwxNi0xNmExLDEsMCwxLDEsMS40MiwxLjQybC0xNiwxNkExLDEsMCwwLDEsOCwyNVoiLz48L2c+PGcgaWQ9ImZyYW1lIj48cmVjdCBjbGFzcz0iY2xzLTEiIGhlaWdodD0iMzIiIHdpZHRoPSIzMiIvPjwvZz48L3N2Zz4=");
+}
+
+.icon-lock {
+  width: 16px;
+  height: 23px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0wIDBoNDh2NDhIMFYweiIgaWQ9ImEiLz48L2RlZnM+PGNsaXBQYXRoIGlkPSJiIj48dXNlIG92ZXJmbG93PSJ2aXNpYmxlIiB4bGluazpocmVmPSIjYSIvPjwvY2xpcFBhdGg+PHBhdGggY2xpcC1wYXRoPSJ1cmwoI2IpIiBkPSJNMjQgMzRjMi4yIDAgNC0xLjggNC00cy0xLjgtNC00LTQtNCAxLjgtNCA0IDEuOCA0IDQgNHptMTItMThoLTJ2LTRjMC01LjUyLTQuNDgtMTAtMTAtMTBTMTQgNi40OCAxNCAxMnY0aC0yYy0yLjIgMC00IDEuOC00IDR2MjBjMCAyLjIgMS44IDQgNCA0aDI0YzIuMiAwIDQtMS44IDQtNFYyMGMwLTIuMi0xLjgtNC00LTR6bS0xOC4yLTRjMC0zLjQyIDIuNzgtNi4yIDYuMi02LjJzNi4yIDIuNzggNi4yIDYuMnY0SDE3Ljh2LTR6TTM2IDQwSDEyVjIwaDI0djIweiIvPjwvc3ZnPg==");
 }
 
 /* Input */
 .input-text {
-  height: 32px;
+  height: 36px;
   padding: 0 10px;
   border: 1px solid #d9d9d9;
 }
@@ -411,14 +446,31 @@ a.btn-primary {
   position: relative;
   display: inline-flex;
 }
-.input-text-item.type-search > .icon-search {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
+.input-text-item.type-search .icon {
+  flex-shrink: 1;
 }
 .input-text-item.type-search > input {
   padding-left: 35px;
+}
+.input-text-item.leading-icon .leading {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+.input-text-item.leading-icon .input-text {
+  padding-left: 30px;
+}
+.input-text-item.trailing-icon .trailing {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(-50%);
+}
+.input-text-item.trailing-icon .input-text {
+  padding-right: 30px;
 }
 .input-text-item .btn-password {
   position: absolute;
@@ -800,20 +852,20 @@ input[type=range].input-slider:disabled {
   background-origin: border-box;
 }
 .step-group > li.is-actived::before, .step-group > li.is-finshed::before {
-  background-color: #1890ff;
+  background-color: rgb(44, 44, 44);
 }
 .step-group > li.is-actived {
   color: #ffffff;
 }
 .step-group > li.is-actived .step-item {
   border-color: transparent;
-  background-color: #1890ff;
+  background-color: rgb(44, 44, 44);
 }
 .step-group > li.is-finshed {
-  color: #1890ff;
+  color: rgb(44, 44, 44);
 }
 .step-group > li.is-finshed .step-item {
-  border-color: #1890ff;
+  border-color: rgb(44, 44, 44);
 }
 .step-group.type01 .step-item {
   width: 100px;
