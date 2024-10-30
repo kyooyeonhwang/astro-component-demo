@@ -260,17 +260,17 @@ td .doc_logo {
     }
     &.foundation {
       &::before {
-        background-image: url('../../public/images/guide_foundation.jpg');
+        background-image: url('/images/guide_foundation.jpg');
       }
     }
     &.component {
       &::before {
-        background-image: url('../../public/images/guide_component.jpg');
+        background-image: url('/images/guide_component.jpg');
       }
     }
     &.page {
       &::before {
-        background-image: url('../../public/images/guide_page.jpg');
+        background-image: url('/images/guide_page.jpg');
       }
     }
   }
