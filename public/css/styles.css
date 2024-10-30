@@ -5,6 +5,8 @@ html, body {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -38,28 +40,27 @@ a, a:link {
   border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
 }
-#doc_header .doc_logo,
-#doc_header .doc_logo a,
-#doc_header .doc_logo a:hover {
-  font: bold 18px/1 Pretendard, sans-serif;
+#doc_header .doc_logo a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
   text-transform: uppercase;
   color: #444444;
   text-decoration: none;
 }
 #doc_header .doc_logo a {
   display: flex;
-  align-items: center;
+  width: 220px;
+  font-size: 0;
+  color: transparent;
 }
 #doc_header .doc_logo a::before {
   content: "";
   display: flex;
-  align-self: center;
-  width: 25px;
+  width: 100%;
   height: 25px;
-  margin-right: 10px;
-  border-radius: 3px;
-  vertical-align: middle;
-  background-color: #000;
+  background: url("/public/images/logo_component.png") no-repeat 0 50%;
+  background-size: 100% auto;
 }
 #doc_header .login_group {
   display: flex;
@@ -68,17 +69,17 @@ a, a:link {
 }
 #doc_header .login_group > a,
 #doc_header .login_group > button {
-  padding: 10px 20px;
+  padding: 8px 13px;
   border: 0 none;
   border-radius: 100vmin;
-  font-size: 15px;
+  font-size: 12px;
   color: rgb(255, 255, 255);
   text-decoration: none;
   background-color: rgb(0, 172, 150);
   transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 #doc_header .login_group > a:hover {
-  background-color: #0d4770;
+  background-color: rgb(6, 148, 129);
 }
 #doc_header .login_group > * ~ * {
   margin-left: 2px;
@@ -323,15 +324,29 @@ td .doc_logo {
 
 /* UI 가이드 */
 .doc_guide_summary {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-top: 20px;
 }
-.doc_guide_summary > li {
-  width: 32%;
-  padding: 20px;
-  color: rgba(255, 255, 255, 0.9);
-  background-color: #044e6a;
+.doc_guide_summary > li::before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.doc_guide_summary > li.foundation::before {
+  background-image: url("/images/guide_foundation.jpg");
+}
+.doc_guide_summary > li.component::before {
+  background-image: url("/images/guide_component.jpg");
+}
+.doc_guide_summary > li.page::before {
+  background-image: url("/images/guide_page.jpg");
 }
 .doc_guide_summary .doc_icon_img {
   display: flex;
@@ -342,19 +357,13 @@ td .doc_logo {
 .doc_guide_summary .doc_icon_img img {
   width: 50%;
   opacity: 0.7;
-  /* height: 150px; */
 }
 .doc_guide_summary .doc_desc {
-  text-align: center;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
   text-transform: capitalize;
-}
-.doc_guide_summary .doc_desc > dt {
-  font-size: 22px;
-  font-weight: 700;
-}
-.doc_guide_summary .doc_desc > dd {
-  margin-top: 10px;
-  font-size: 16px;
 }
 
 .doc_visual {
@@ -411,6 +420,7 @@ td .doc_logo {
   border-radius: 4px;
   font-size: 14px;
   color: rgb(102, 102, 102);
+  transition: background-color 0.3s ease-in;
 }
 .category > ul > li li a > .status {
   padding: 1px 5px;
@@ -485,7 +495,6 @@ td .doc_logo {
 .doc_list li {
   position: relative;
   padding-left: 10px;
-  margin-left: 20px;
   font-size: 15px;
   line-height: 1.5;
 }
